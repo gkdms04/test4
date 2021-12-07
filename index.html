@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>자리표</title>
         <h2>&emsp;&emsp;&emsp;&emsp;&emsp;5반 학급자리표</h2>
         <h5>반장: 장채연<br>부반장: 장문경</h5>
+        <script>
+            var num=new Array;
+            for(var i=0;i<30;i++){
+                num[i]=0;
+            }
+            function colorChange(n,targetId){
+                num[n]++;
+                if(num[n]==3){
+                    num[n]=0;
+                }
+                var color=["#FFFFFF","#87CEEB","#FF6347"];
+                var bodyTag=document.getElementById(targetId);
+                var k=num[n];
+                bodyTag.style.background=color[k];
+                bodyTag.style.border=0;
+            }
+        </script>
     </head>
     <body>
         <button style="background-color:skyblue; border: 1px;"><font size="3">조퇴</font></button>
-        <button style="background-color:tomato; border: 1px;"><font size="3">결석</font></button>
-        <table border="1">
-            <tr><td><button style="background-color:white; border: 1px;"><font size="5">김연송</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">황하윤</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">이지우</font></button></td><td><button style="background-color:white; border: 1px;""><font size="5">임윤서</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">최은율</font></button></td></tr>
-            <tr><td><button style="background-color:white; border: 1px;"><font size="5">노하연</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">이한서</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">이수림</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">공민정</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">한시은</font></button></td></tr>
-            <tr><td><button style="background-color:white; border: 1px;"><font size="5">이단비</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">임유나</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">이소연</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">천서연</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">유수민</font></button></td></tr>
-            <tr><td><button style="background-color:white; border: 1px;"><font size="5">임가현</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">전민주</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">탁예린</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">장채연</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">변지영</font></button></td></tr>
-            <tr><td><button style="background-color:white; border: 1px;"><font size="5">조하은</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">장문경</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">강예서</font></button></td><td><button style="background-color:tomato; border: 1px;"><font size="5">정채은</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">황유진</font></button></td></tr>
-            <tr><td><button style="background-color:white; border: 1px;"><font size="5">전혜연</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">권은빈</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">조유정</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">박서영</font></button></td><td><button style="background-color:white; border: 1px;"><font size="5">김민지</font></button></td></tr>
-        </table>
+        <button style="background-color:tomato; border: 1px;"><font size="3">결석</font></button><br><br>
+        <input id="0" style="border:0; background-color:white; font-size: 20pt;" type="button" value="김연송" onclick="colorChange(0,0)"/><input id="6" style="border:0; background-color:white; font-size: 20pt;" type="button" value="황하윤" onclick="colorChange(6,6)"/><input id="12" style="border:0; background-color:white; font-size: 20pt;" type="button" value="이지우" onclick="colorChange(12,12)"/><input id="18" style="border:0; background-color:white; font-size: 20pt;" type="button" value="임윤서" onclick="colorChange(18,18)"/><input id="24" style="border:0; background-color:white; font-size: 20pt;" type="button" value="최은율" onclick="colorChange(24,24)"/><br>
+        <input id="1" style="border:0; background-color:white; font-size: 20pt;" type="button" value="노하연" onclick="colorChange(1,1)"/><input id="7" style="border:0; background-color:white; font-size: 20pt;" type="button" value="이한서" onclick="colorChange(7,7)"/><input id="13" style="border:0; background-color:white; font-size: 20pt;" type="button" value="이수림" onclick="colorChange(13,13)"/><input id="19" style="border:0; background-color:white; font-size: 20pt;" type="button" value="공민정" onclick="colorChange(19,19)"/><input id="25" style="border:0; background-color:white; font-size: 20pt;" type="button" value="한시은" onclick="colorChange(25,25)"/><br>
+        <input id="2" style="border:0; background-color:white; font-size: 20pt;" type="button" value="이단비" onclick="colorChange(2,2)"/><input id="8" style="border:0; background-color:white; font-size: 20pt;" type="button" value="임유나" onclick="colorChange(8,8)"/><input id="14" style="border:0; background-color:white; font-size: 20pt;" type="button" value="이소연" onclick="colorChange(14,14)"/><input id="20" style="border:0; background-color:white; font-size: 20pt;" type="button" value="천서연" onclick="colorChange(20,20)"/><input id="26" style="border:0; background-color:white; font-size: 20pt;" type="button" value="유수민" onclick="colorChange(26,26)"/><br>
+        <input id="3" style="border:0; background-color:white; font-size: 20pt;" type="button" value="임가현" onclick="colorChange(3,3)"/><input id="9" style="border:0; background-color:white; font-size: 20pt;" type="button" value="전민주" onclick="colorChange(9,9)"/><input id="15" style="border:0; background-color:white; font-size: 20pt;" type="button" value="탁예린" onclick="colorChange(15,15)"/><input id="21" style="border:0; background-color:white; font-size: 20pt;" type="button" value="장채연" onclick="colorChange(21,21)"/><input id="27" style="border:0; background-color:white; font-size: 20pt;" type="button" value="변지영" onclick="colorChange(27,27)"/><br>
+        <input id="4" style="border:0; background-color:white; font-size: 20pt;" type="button" value="조하은" onclick="colorChange(4,4)"/><input id="10" style="border:0; background-color:white; font-size: 20pt;" type="button" value="장문경" onclick="colorChange(10,10)"/><input id="16" style="border:0; background-color:white; font-size: 20pt;" type="button" value="강예서" onclick="colorChange(16,16)"/><input id="22" style="border:0; background-color:white; font-size: 20pt;" type="button" value="정채은" onclick="colorChange(22,22)"/><input id="28" style="border:0; background-color:white; font-size: 20pt;" type="button" value="황유진" onclick="colorChange(28,28)"/><br>
+        <input id="5" style="border:0; background-color:white; font-size: 20pt;" type="button" value="전혜연" onclick="colorChange(5,5)"/><input id="11" style="border:0; background-color:white; font-size: 20pt;" type="button" value="권은빈" onclick="colorChange(11,11)"/><input id="17" style="border:0; background-color:white; font-size: 20pt;" type="button" value="조유정" onclick="colorChange(17,17)"/><input id="23" style="border:0; background-color:white; font-size: 20pt;" type="button" value="박서영" onclick="colorChange(23,23)"/><input id="29" style="border:0; background-color:white; font-size: 20pt;" type="button" value="김민지" onclick="colorChange(29,29)"/><br>
     </body>
 </html>
